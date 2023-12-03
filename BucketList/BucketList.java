@@ -36,6 +36,20 @@ public class BucketList {
         String[] words = wordsString.split(", ");//splits the entered line in separate words.
 
         ArrayList<String> uncategorised = new ArrayList<String>();//array list to store the string values without a category.
+        /*
+         * loops through the entered words comparing the character values to the key character values
+         * if the characters are the same the string is added to a list
+         */
+        for(String word:words){
+            char[] chars =word.toCharArray();
+            String mostValues="";
+            int maxLength=0;
+
+            //loops through the key values in the linkedhashmap
+            for(String key:map.keySet()){
+                
+            }
+        }
 
         
     }
