@@ -47,7 +47,13 @@ public class BucketList {
 
             //loops through the key values in the linkedhashmap
             for(String key:map.keySet()){
-                
+                char[] keyC = key.toCharArray();
+                for(int i=0;i<keyC.length;i++){//loop through the character values of the key, and only use the length of key Characters
+                    if(chars[i]!=keyC[i]){
+                        break;//if the character values of the key and the string are not the same break
+                    }
+
+                }
             }
         }
 
