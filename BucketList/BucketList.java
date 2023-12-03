@@ -48,13 +48,23 @@ public class BucketList {
             //loops through the key values in the linkedhashmap
             for(String key:map.keySet()){
                 char[] keyC = key.toCharArray();
-                for(int i=0;i<keyC.length;i++){//loop through the character values of the key, and only use the length of key Characters
+                int i=0;
+                for( i=0;i<keyC.length;i++){//loop through the character values of the key, and only use the length of key Characters
                     if(chars[i]!=keyC[i]){
                         break;//if the character values of the key and the string are not the same break
                     }
 
                 }
+                if(i>maxLength&& i == keyC.length && i <= chars.length){
+                    maxLength = i;
+                    mostValues = key;
+                }
             }
+            if (maxLength > 0){ //if the maxLength is greater than 0 then it certainly belongs to category
+                map.get(mostValues).add(word);//retrieve the key from the map and add that word
+            }
+            else
+                uncategorised.add(word);// if the maxlength is less then 0, then it does not have a category
         }
 
         
