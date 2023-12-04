@@ -73,12 +73,24 @@ public class BucketList {
             ArrayList<String> matches = map.get(key);//an arraylist of string values in each key
             for (int i = 0; i < matches.size(); i++){//loops until the size of each match list per key
                 if (i < matches.size()-1)
-                    System.out.print(matches.get(i) + ", ");
+                    System.out.print(matches.get(i) + ", ");//if there is still more words in the match list print word and ","
                 else
-                    System.out.print(matches.get(i) + ".");
+                    System.out.print(matches.get(i) + ".");//if there are no more words in the match arraylist print".""
             }
             System.out.println();
         }
+        if (uncategorised.size() > 0){
+            //if there are words in the uncategorised arraylist loop through the list
+            System.out.println("Uncategorised:");
+            for (int i = 0; i < uncategorised.size(); i++){
+                if (i < uncategorised.size()-1)
+                    System.out.print(uncategorised.get(i) + ", ");
+                else
+                    System.out.println(uncategorised.get(i) + ".");
+            }
+        }
+        System.out.println("Done");//when done print the categorised list and the uncategorised list.
+
 
         
     }
