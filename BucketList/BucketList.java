@@ -67,6 +67,19 @@ public class BucketList {
                 uncategorised.add(word);// if the maxlength is less then 0, then it does not have a category
         }
 
+        System.out.println("Categorised:");
+        for (String key: map.keySet()) {//loops through the key values in the linkedHashMap
+            System.out.print(key + ": ");
+            ArrayList<String> matches = map.get(key);//an arraylist of string values in each key
+            for (int i = 0; i < matches.size(); i++){//loops until the size of each match list per key
+                if (i < matches.size()-1)
+                    System.out.print(matches.get(i) + ", ");
+                else
+                    System.out.print(matches.get(i) + ".");
+            }
+            System.out.println();
+        }
+
         
     }
     
